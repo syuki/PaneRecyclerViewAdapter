@@ -1,4 +1,4 @@
-package com.github.syuki.panerececlerview;
+package com.syuki.panerecyclerviewadapter;
 
 import org.junit.Test;
 

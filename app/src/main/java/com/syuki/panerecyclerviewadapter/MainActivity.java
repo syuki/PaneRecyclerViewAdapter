@@ -1,4 +1,4 @@
-package com.github.syuki.panerececlerview;
+package com.syuki.panerecyclerviewadapter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.github.syuki.panerececlerview;
+package com.syuki.panerecyclerviewadapter;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.github.syuki.panerececlerview", appContext.getPackageName());
+        assertEquals("com.syuki.panerecyclerviewadapter", appContext.getPackageName());
     }
 }
