@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.syuki.recyclerview.adapter.PaneRecyclerViewAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,12 +32,19 @@ public class MainActivity extends AppCompatActivity {
         List<String> mItems = new ArrayList<>();
         for (int i = 0; i < 50; i++) { mItems.add("item" + i); }
         MyAdapter adapter = new MyAdapter(this, mItems);
+        PaneRecyclerViewAdapter paneRecyclerViewAdapter = new PaneRecyclerViewAdapter(adapter);
+        TextView headerTextView = new TextView(this);
+        headerTextView.setText("header view");
+        TextView footerTextView = new TextView(this);
+        footerTextView.setText("footer view");
+        paneRecyclerViewAdapter.setHeaderView(headerTextView);
+        paneRecyclerViewAdapter.setFooterView(footerTextView);
 
         int linerLayoutOrientation = mLayoutManager.getOrientation();
         DividerItemDecoration divider = new DividerItemDecoration(this, linerLayoutOrientation);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(paneRecyclerViewAdapter);
         mRecyclerView.addItemDecoration(divider);
     }
 
